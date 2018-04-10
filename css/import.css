@@ -9,8 +9,8 @@
     -ms-flex-direction: column;
     flex-direction: column;
     min-width: 0;
-    max-height: 392px;
-    overflow: hidden;
+    /* max-height: 400px;  */
+    /* overflow: hidden; */
     /* height: 392px;   */
     margin: 10px 0px;
     word-wrap: break-word;
@@ -25,6 +25,14 @@
     width: 100%;
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
+}
+
+.custom-card-image{
+    height: 400px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 5px 5px #e1e1e;
 }
 
 .card-body{

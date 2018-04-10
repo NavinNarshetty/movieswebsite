@@ -1,12 +1,15 @@
 <!--FORECAST  -->
 
 <div class="container-fluid" style="margin-top:90px">
-
+  <!-- background-image:url('http://testhyderabadschool.sfanow.in/api/upload/readFile?file=5ac1e88370862677b99b040a.jpg') -->
   
   <div class="row">
     <div class="col-md-3 col-sm-4 col-xs-6 " ng-repeat="moviecard in movieData track by $index">
       <div class="card">
-        <img class="card-img-top" ng-src="{{moviecard.poster_path | serverimage}}" alt="Card image">
+        <!-- <img class="card-img-top" ng-src="{{moviecard.poster_path | serverimage}}" alt="Card image"> -->
+        <div class="custom-card-image" style="background-image: url('{{moviecard.poster_path | serverimage}}')">
+
+        </div>
         <!-- <div class="card-body">
            <p class="card-title">{{moviecard.original_title}}</p> 
         </div>  -->
