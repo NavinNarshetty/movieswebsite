@@ -16,6 +16,10 @@
   .detail-moviecard-reviewcomments p {
     word-wrap: break-word;
   }
+  .detail-moviecard-imageholder img {
+    height: 300px;
+    margin: 0 auto;
+  }
   /* DETAIL PAGE END */
 }
 
