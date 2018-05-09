@@ -41,7 +41,7 @@
     <!-- DESKTOP END -->
 
     <!-- MOBILE MOVIES -->
-    <div class="col-md-3 col-sm-4 col-xs-6" ng-repeat="moviecard in movieData track by $index" ng-click="movieDetailPage(moviecard.id,'movie')"
+    <div class="col-md-3 col-sm-4 col-xs-6 visible-xs" ng-repeat="moviecard in movieData track by $index" ng-click="movieDetailPage(moviecard.id,'movie')"
       ng-if="moviecard.original_title">
       <div class="card">
         <!-- <img class="card-img-top" ng-src="{{moviecard.poster_path | serverimage}}" alt="Card image"> -->
@@ -78,7 +78,7 @@
     <!-- MOBILE MOVIES END -->
 
     <!-- MOBILE TV SHOWS -->
-    <div class="col-md-3 col-sm-4 col-xs-6" ng-repeat="moviecard in movieData track by $index" ng-click="movieDetailPage(moviecard.id,'tv')"
+    <div class="col-md-3 col-sm-4 col-xs-6 visible-xs" ng-repeat="moviecard in movieData track by $index" ng-click="movieDetailPage(moviecard.id,'tv')"
       ng-if="moviecard.original_name">
       <div class="card">
         <!-- <img class="card-img-top" ng-src="{{moviecard.poster_path | serverimage}}" alt="Card image"> -->
