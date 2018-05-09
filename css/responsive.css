@@ -1,0 +1,26 @@
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  /* DETAIL CONTENT PAGE */
+  /* DETAIL CONTENT PAGE END */
+  /* MAIN PAGE */
+  .custom-card-image {
+    height: 250px;
+  }
+  .navbar-nav a {
+    font-size: 12px;
+  }
+  /* MAIN PAGEEND */
+  /* DETAIL PAGE */
+  .detail-moviecard-holder p {
+    font-size: 14px;
+  }
+  .detail-moviecard-reviewcomments p {
+    word-wrap: break-word;
+  }
+  /* DETAIL PAGE END */
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+@media only screen and (min-width: 992px) and (max-width: 1999px) {}

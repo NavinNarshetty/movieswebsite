@@ -12,7 +12,7 @@ weatherApp.config(function ($stateProvider, $urlRouterProvider) {
 
   $stateProvider
 
-  // HOME PAGE
+    // HOME PAGE
     .state('home', {
       url: '/',
       templateUrl: 'pages/home.html',
@@ -40,24 +40,33 @@ weatherApp.service('cityservice', function () {
   this.city = 'Mumbai, India';
 })
 
-weatherApp.controller('homeCtrl', function ($scope, $state, cityservice) {
-  console.log("i am in ");
-  $scope.city = cityservice.city;
+weatherApp.controller('homeCtrl', function ($scope, $state, cityservice, $timeout) {
+  // console.log("i am in ");
+  // $scope.swiperInit = function () {
+  //   $timeout(function () {
+  //     var bannerSlide = new Swiper('.swiper-container', {
+  //       slidesPerView: 1,
+  //       preloadImages: true,
+  //       speed: 500,
+  //       autoplay: 300,
+  //       reverseDirection: false,
+  //       paginationClickable: true,
+  //       loop: true,
+  //       pagination: {
+  //         el: '.swiper-pagination',
+  //       },
+  //     });
+  //   })
+  // };
 
-  $scope.$watch('city', function () {
-    cityservice.city = $scope.city;
-  });
+  // $scope.$on('$viewContentLoaded', function (event) {
+  //   $scope.swiperInit();
+  // })
 
+  // $scope.$watch('city', function () {
+  //   cityservice.city = $scope.city;
+  // });
 
-  $scope.goTo = function (data) {
-    console.log("in click");
-    console.log(data, "check")
-    $state.go(
-      'forecast', {
-        type: data
-      }
-    )
-  }
 });
 
 
@@ -84,21 +93,21 @@ weatherApp.filter('serverimagecover', function () {
     }
   };
 });
-weatherApp.filter("youtubeUrl" , function($sce){
-  return function(value){
-    if(value){
-      return $sce.trustAsResourceUrl('https://www.youtube.com/https://www.youtube.com/watch?v='+ value)  
-    }else{
+weatherApp.filter("youtubeUrl", function ($sce) {
+  return function (value) {
+    if (value) {
+      return $sce.trustAsResourceUrl('https://www.youtube.com/https://www.youtube.com/watch?v=' + value)
+    } else {
       return "";
     }
   };
 });
 
-weatherApp.filter("youtubeImages" , function($sce){
-  return function(value){
-    if(value){
-      return $sce.trustAsResourceUrl('http://i3.ytimg.com/vi/' + value +'/hqdefault.jpg')  
-    }else{
+weatherApp.filter("youtubeImages", function ($sce) {
+  return function (value) {
+    if (value) {
+      return $sce.trustAsResourceUrl('http://i3.ytimg.com/vi/' + value + '/hqdefault.jpg')
+    } else {
       return "";
     }
   };
@@ -117,44 +126,44 @@ weatherApp.filter('truncate', function () {
 });
 
 weatherApp.directive('fancybox', function ($document) {
-        return {
-            restrict: 'EA',
-            replace: false,
-            link: function (scope, element, attr) {
-                var $element = $(element);
-                var target;
-                if (attr.rel) {
-                    target = $("[rel='" + attr.rel + "']");
-                } else {
-                    target = element;
-                }
+  return {
+    restrict: 'EA',
+    replace: false,
+    link: function (scope, element, attr) {
+      var $element = $(element);
+      var target;
+      if (attr.rel) {
+        target = $("[rel='" + attr.rel + "']");
+      } else {
+        target = element;
+      }
 
-                target.fancybox({
-                    openEffect: 'fade',
-                    closeEffect: 'fade',
-                    overflow: 'hidden',
-                    closeBtn: true,
-                    arrows : true,
-                    keyboard : true,
-                    protect : true,
-                    helpers: {
-                      media: {
-                        youtube : {
-                          autoplay : 1
-                        }
-                      }
-                    },
-                    buttons: [
-                      // 'fullScreen',
-                      //'download',
-                      // 'thumbs',
-                      'zoom',
-                      // 'tag',
-                      // 'share', //default share
-                      // 'sharing', //custom share
-                      'close',
-                    ]
-                });
+      target.fancybox({
+        openEffect: 'fade',
+        closeEffect: 'fade',
+        overflow: 'hidden',
+        closeBtn: true,
+        arrows: true,
+        keyboard: true,
+        protect: true,
+        helpers: {
+          media: {
+            youtube: {
+              autoplay: 1
             }
-        };
+          }
+        },
+        buttons: [
+          // 'fullScreen',
+          //'download',
+          // 'thumbs',
+          'zoom',
+          // 'tag',
+          // 'share', //default share
+          // 'sharing', //custom share
+          'close',
+        ]
+      });
+    }
+  };
 })

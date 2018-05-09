@@ -1,5 +1,4 @@
-
-.card{
+.card {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -16,37 +15,38 @@
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
     cursor: pointer;
 }
 
-.card-img-top{
+.card-img-top {
     width: 100%;
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
 }
 
-.custom-card-image{
+.custom-card-image {
     height: 400px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 0px 5px 5px #e1e1e;
+    /* box-shadow: 0px 5px 5px #e1e1e; */
 }
 
-.card-body{
+.card-body {
     webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 1.25rem;
 }
- .card-title{
-       margin-bottom: .75rem;
-       font-size: 10px;
- } 
 
- .card-overlay{
+.card-title {
+    margin-bottom: .75rem;
+    font-size: 10px;
+}
+
+.card-overlay {
     position: absolute;
     bottom: 100%;
     left: 0;
@@ -54,126 +54,130 @@
     background-color: #000000;
     overflow: hidden;
     width: 100%;
-    height:0;
+    height: 0;
     transition: .5s ease;
- }
+}
 
- .card:hover .card-overlay{
+.card:hover .card-overlay {
     bottom: 0;
     height: 100%;
- }
+}
 
- .m-clear{
-     margin: 0px;
- }
- .movie-details{
-     padding: 8px;
-     margin-left: 5px;
- }
- .movie-title{
+.m-clear {
+    margin: 0px;
+}
+
+.movie-details {
+    padding: 8px;
+    margin-left: 5px;
+}
+
+.movie-title {
     color: #f9b037;
- }
- .movie-overview{
-     font-size: 12px;
-     color: #f9b037;
-     max-height: 250px;
-     overflow-y: auto;
- }
+}
 
+.movie-overview {
+    font-size: 12px;
+    color: #f9b037;
+    max-height: 250px;
+    overflow-y: auto;
+}
 
- .movie-releasedetails p{
-     font-size: 12px;
-     color: #f9b037;
- }
+.movie-releasedetails p {
+    font-size: 12px;
+    color: #f9b037;
+}
 
- /* width */
+/* width */
+
 ::-webkit-scrollbar {
     width: 4px;
     height: 4px;
 }
 
 /* Track */
+
 ::-webkit-scrollbar-track {
-    background: #e1e1e1; 
+    background: #e1e1e1;
 }
- 
+
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #888;
 }
 
 /* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
 }
 
-.detail-card-poster{
+.detail-card-poster {
     height: 500px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 10%;
 }
 
-
-
-.detail-moviecard-holder p{
-    font-size: 13px;
+.detail-moviecard-holder p {
+    font-size: 14px;
     color: #fff;
 }
 
-.color-white{
+.color-white {
     color: #fff;
 }
-.detail-moviecard-header{
+
+.detail-moviecard-header {
     color: #fff;
     font-weight: 600;
     font-style: italic;
 }
 
-.detail-moviecard-imageholder{
+.detail-moviecard-imageholder {
     margin-top: -250px;
 }
-.detail-moviecard-trailercard{
+
+.detail-moviecard-trailercard {
     cursor: pointer;
     width: 230px;
     height: 175px;
     position: relative;
 }
 
-.detail-moviecard-playbutton{
+.detail-moviecard-playbutton {
     position: absolute;
     right: 0px;
     bottom: 0px;
     color: #fff;
 }
-.detail-moviecard-trailer{
+
+.detail-moviecard-trailer {
     white-space: nowrap;
     overflow: auto;
 }
-.detail-moviecard-trailerholder{
+
+.detail-moviecard-trailerholder {
     margin: 0px 8px;
     display: inline-block;
 }
 
-.media-left{
+.media-left {
     display: table-cell;
     vertical-align: top;
 }
 
-.detail-moviecard-reviewcomments p{
+.detail-moviecard-reviewcomments p {
     color: #fff;
     font-size: 12px;
 }
 
-.detail-moviecard-reviewcomments{
+.detail-moviecard-reviewcomments {
     margin: 15px 0px;
 }
 
-.detail-moviecard-reviewcomments h5{
+.detail-moviecard-reviewcomments h5 {
     font-weight: bold;
 }
-
-
-
-
 

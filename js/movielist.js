@@ -1,7 +1,7 @@
 weatherApp.controller('forecastCtrl', function ($scope,$timeout, $resource, $state, $stateParams, $http, cityservice) {
   $scope.city = cityservice.city;
 
-  console.log($stateParams, "check the url data")
+  // console.log($stateParams, "check the url data")
 
         $timeout( function(){
              $(".fancybox").fancybox();
@@ -44,8 +44,8 @@ weatherApp.controller('forecastCtrl', function ($scope,$timeout, $resource, $sta
       $scope.pagesData = data.data;
 
       // callback(data);
-      console.log($scope.movieData, "new thing")
-      console.log(data, "new thing again")
+      // console.log($scope.movieData, "new thing")
+      // console.log(data, "new thing again")
     });
   }
   $scope.movieApi();
@@ -60,7 +60,7 @@ weatherApp.controller('forecastCtrl', function ($scope,$timeout, $resource, $sta
 
   // CLICK FOR DETAIL
   $scope.movieDetailPage = function (data, type) {
-    console.log("i am in clikcked function", data, type);
+    // console.log("i am in clikcked function", data, type);
     $state.go('detailcontent', {
       id: data,
       formattype: type,
