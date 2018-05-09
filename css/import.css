@@ -114,6 +114,7 @@
 }
 
 .detail-card-poster {
+    margin-top: -20px;
     height: 500px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -180,4 +181,3 @@
 .detail-moviecard-reviewcomments h5 {
     font-weight: bold;
 }
-

@@ -28,11 +28,23 @@
         </div>
         <h4 class="color-white hidden-xs">Recommeded Movies</h4>
         <div class="row">
-          <div class="col-md-6 hidden-xs" ng-repeat="moviecard in recommendedData | limitTo:6 track by $index">
+          <!-- MOVIE -->
+          <div class="col-md-6 hidden-xs" ng-repeat="moviecard in recommendedData | limitTo:6 track by $index" ng-click="movieDetailPage(moviecard.id,'movie')"
+            ng-if="moviecard.original_title">
             <div class="card">
               <img class="card-img-top" ng-src="{{moviecard.poster_path | serverimage}}" alt="Card image">
             </div>
           </div>
+          <!-- MOVIE -->
+
+          <!-- TV -->
+          <div class="col-md-6 hidden-xs" ng-repeat="moviecard in recommendedData | limitTo:6 track by $index" ng-click="movieDetailPage(moviecard.id,'tv')"
+            ng-if="moviecard.original_name">
+            <div class="card">
+              <img class="card-img-top" ng-src="{{moviecard.poster_path | serverimage}}" alt="Card image">
+            </div>
+          </div>
+          <!-- TV END -->
         </div>
 
       </div>
